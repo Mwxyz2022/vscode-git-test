@@ -1,16 +1,4 @@
 import React from 'react'
 
-
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
-
-
-const App = () => (
-    <>
-        <Header />
-        <Main />
-        <Footer />
-    </>
-)
+const App = () => <div>New Project</div>
 export default App

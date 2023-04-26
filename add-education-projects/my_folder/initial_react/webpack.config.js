@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 const CopyPlugin = require('copy-webpack-plugin')
-const path = require('path')
 
 module.exports = (env, argv) => {
     const isProduction = argv.mode === 'production'
@@ -11,7 +10,6 @@ module.exports = (env, argv) => {
         entry: './src/index.jsx',
         output: {
             filename: 'bundle.js',
-            path: path.resolve(__dirname, 'dist'),
             publicPath: '/',
         },
         module: {

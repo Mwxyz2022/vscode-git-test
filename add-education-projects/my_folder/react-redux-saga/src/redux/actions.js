@@ -1,48 +1,48 @@
 import {
-  CREATE_POST,
-  HIDE_ALERT,
-  HIDE_LOADER,
-  REQUEST_POSTS,
-  SHOW_ALERT,
-  SHOW_LOADER,
+	CREATE_POST,
+	HIDE_ALERT,
+	HIDE_LOADER,
+	REQUEST_POSTS,
+	SHOW_ALERT,
+	SHOW_LOADER,
 } from './types'
 
 export const createPost = newPost => {
-  return {
-    type: CREATE_POST,
-    payload: newPost,
-  }
+	return {
+		type: CREATE_POST,
+		payload: newPost,
+	}
 }
 
 export const showLoader = () => {
-  return {
-    type: SHOW_LOADER,
-  }
+	return {
+		type: SHOW_LOADER,
+	}
 }
 
 export const hideLoader = () => {
-  return {
-    type: HIDE_LOADER,
-  }
+	return {
+		type: HIDE_LOADER,
+	}
 }
 
 export const hideAlert = () => {
-  return {
-    type: HIDE_ALERT,
-  }
+	return {
+		type: HIDE_ALERT,
+	}
 }
 
 export const showAlert = text => {
-  return dispatch => {
-    dispatch({
-      type: SHOW_ALERT,
-      payload: text,
-    })
+	return dispatch => {
+		dispatch({
+			type: SHOW_ALERT,
+			payload: text,
+		})
 
-    setTimeout(() => {
-      dispatch(hideAlert())
-    }, 3000)
-  }
+		setTimeout(() => {
+			dispatch(hideAlert())
+		}, 3000)
+	}
 }
 
 // export const fetchPosts = () => {
@@ -64,7 +64,7 @@ export const showAlert = text => {
 // }
 
 export const fetchPosts = () => {
-  return {
-    type: REQUEST_POSTS,
-  }
+	return {
+		type: REQUEST_POSTS,
+	}
 }
